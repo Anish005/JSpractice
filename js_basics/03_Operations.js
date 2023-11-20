@@ -28,3 +28,9 @@ let gameCounter = 100
 ++gameCounter//101
 gameCounter++//101 by running separately note the differnce btw them in mdn
 console.log(gameCounter);
+
+console.log(null > 0); //false
+console.log(null == 0);//false
+console.log(null >= 0);//true internal conversion
+
+//=== strict check=> which check along with the datatype
