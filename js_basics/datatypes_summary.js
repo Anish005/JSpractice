@@ -31,7 +31,25 @@ const myFunction = function (){ //typeof --> function(object function)
 
 }
 
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//memory ---- stack and heap
+//stack - primitive and heap - Non - primitive
 
+let myname = "anish"
+let anothername = "manish"
 
+console.log(myname);
+console.log(anothername);
+
+let userOne = {
+    email:"anishapnda@gmail.com",
+    upi:"dhbdhs@ybl"
+}
+let userTwo = userOne
+
+userTwo.email = "anishapnfda@amazon.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);//they point to the same reference so it changes the value in both
 
 
