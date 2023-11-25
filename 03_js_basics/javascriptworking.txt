@@ -1,0 +1,22 @@
+JavaScript Execution Context
+ first--> global Execution Context--- this(this value is Window for browser)
+ these all are executed in a thread(JavaScript is single thread)
+
+ Functional Execution Context
+
+ Eval Execution Context(for mongoose but mostly above two)
+
+ code execution in two phases
+ 1> Memory Creation Phase(Creation Phase)--->only Memory allocation no execution
+ 2> Execution Phase
+
+ first step === global execution-- this
+ second step === memory creation (first cycle), all variables are created and kept undefined and for functions hold the definition
+third step === execution phase , assigining the values provided in the code
+now here if u encounter a function then it creates another executional block for that function
+---------------->new executional environment + execution thread
+----------------->memory phase (again) variables present in the functional scope
+----------------->execution phase(again)-----assignment and calculation
+------------------>after the work is done the new executional environment is deleted
+return is performed on the global executional Context
+
