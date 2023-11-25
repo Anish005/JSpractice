@@ -36,7 +36,7 @@ if (true){
     const username = "anoish"
     if (username === "anoish"){
         const website = "youtube"
-        console.log(username + " " + website);
+        //console.log(username + " " + website);
     }
     //console.log(website);----> throws error
 }
@@ -49,7 +49,7 @@ function addone(num) {
     
 }
 addone(5)
-
+//addTwo(5)//if u declare here it will throw error because accessed before decalaration
 const addTwo = function(num) {//expressions
     return num + 2
 }
