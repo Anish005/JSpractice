@@ -4,11 +4,28 @@
     <meta charset="UTF-8">
     
     <title>DOM learning</title>
+    <style>
+        .bg-black{
+            background-color: #212122;
+            color: #fff;
+        }
+    </style>
 </head>
-<body>
-    <div class="bg-black">
-        <h1 class="heading">DOM(Document Object Model learning)</h1>
+<body class="bg-black">
+    <div >
+        <h1 id="title" class="heading">DOM(Document Object Model learning)<span style="display: none;">test text</span></h1>
+        <h1>hey there all</h1>
+        <h2>Lorem ipsum dolor sit amet consectetur adi</h2>
+        <h2>Lorem ipsum dolor sit amet consectetur adi</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+        <input type="password" name="id">
+        <Ul>
+            <li class="listitem">one</li>
+            <li class="listitem">two</li>
+            <li class="listitem">two</li>
+            <li class="listitem">four</li>
+        </Ul>
+    
     </div>
     <!-- Window =>Documnet=>HTML where HTML has two childs i.e Head and Body
     Head=>
@@ -18,6 +35,14 @@
             two childs => h1 and p
                     h1 =>attribute and textnode
                     p  =>textnode
-                  -->
+                 note the difference between Arrays,HTMLCollections,nodeCollections 
+                difference between innerHTML, innerText and textContent
+                use of querySelector(gives one value) and querySelectorAll note the difference 
+            Nodelist is returned in the case of the querySelectorAll remember the fact that
+        NodeList and HTML Collections are not pure arrays and to use the methods of the arrays like map 
+        on the NodeList then we have to first convert the NodelIst into the arrays then apply all the methods
+        Similarly in case of the HTML Collections
+        document.getElementByClassName() gives HTML Collections note the difference b/w the NodeList
+         -->
 </body>
 </html>

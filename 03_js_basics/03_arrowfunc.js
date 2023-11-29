@@ -15,13 +15,13 @@ const user = {
 //console.log(this);//since u are under node env it will give you {} i.e empty  but
 //the result will be different from browser---i.e Window object
 function chai() {
-    //console.log(this);//gives a lot of meta functions
+    console.log(this);//gives a lot of meta functions
     let username = "anish"
     //console.log(this);//same result as the line 18
     console.log(this.username);//the result would be undefined which is why this is used for objects and not for the functions
 
 }
-//chai()
+chai()
 
 const coffee = () =>{
     let username = "anish"
