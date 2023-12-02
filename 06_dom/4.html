@@ -5,7 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM learning 4 </title>
 </head>
-<body>
-    
+<body style="background-color: #212121;color:#fff">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
 </body>
+<script>
+    function addLanguage(langName){
+        const li = document.createElement('li')
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+        //traversing DOM tree always so use the optimized approach
+    }
+    addLanguage("python")
+    addLanguage("Java")
+    //here we dont need to traverse the whole DOM Tree below
+    function addOptiLanguage(langName){//optimized way saves memory
+        const li  = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+
+    }
+    addOptiLanguage("Go Lang")
+    //Editing the values
+    const secondLang = document.querySelector("li:nth-child(2)")
+    //secondLang.innerHTML = "Mojo"//not an optimized way keep in mind
+    const newLi = document.createElement('li')
+    newLi.textContent = "Jojo"//doesnt make any difference between innerHTML
+    secondLang.replaceWith(newLi)
+
+    //edit
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = "<li>TypeScript</li>"
+
+    //remove
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()//removing the Go lang that was added first in this
+
+
+
+
+
+</script>
 </html>
