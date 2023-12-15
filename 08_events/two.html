@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Functions</title>
+</head>
+<body>
+    <h1>ANish learning</h1>
+    <button id="stop">Stop</button>
+    
+</body>
+<script>
+    const sayName = function(){
+        console.log("Anish")
+    }
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = "LEarniing Anish"
+    }
+    const changeME = setTimeout(changeText,2000)
+
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(changeME) // if the event of the setTimeout is not happening then use this
+        console.log("STOPPED")
+    })
+
+    
+
+</script>
+</html>

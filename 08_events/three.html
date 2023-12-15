@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Functions 2 </title>
+</head>
+<body>
+    <h1>ANish learning 2</h1>
+    <button id="stop">Stop</button>
+    <button id="start">Start</button>
+    
+</body>
+<script>
+    //start should print the name after certain interval continously AND stop should stop it
+    const sayDate = function(str){
+        console.log(str,Date.now())
+    }
+    
+    document.querySelector('#start').addEventListener('click',function(){
+     const wait =   setInterval(sayDate,1000,"hi")
+     document.querySelector('#stop').addEventListener('click',function(){
+        clearInterval(wait)
+    })
+
+    })
+    
+
+</script>
+</html>
