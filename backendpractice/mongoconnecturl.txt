@@ -1,2 +1,0 @@
-mongodb+srv://anishpanda31:DsfO6P9y4dcfM4XJ@cluster0.w41pu6x.mongodb.net/
-postgresql://anishpanda31:38xeXSlnmRMG@ep-withered-mode-76543906.us-east-2.aws.neon.tech/test?sslmode=require
