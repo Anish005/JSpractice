@@ -23,7 +23,8 @@ app.use(express.json());
 app.post("/health-checkup",  function (req, res) {
   // kidneys = [1, 2]
   const kidneys = req.body.kidneys;
-  const response = schema.safeParse(kidneys)//safeParse to check 
+  const response = schema.safeParse(kidneys)//safeParse to check like if success or fail
+  //Parse --> we can use only parse if we want to throw an exception
   if (!response.success){
     res.status(411).json({
         msg:"Invalid input"
