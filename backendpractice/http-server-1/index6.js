@@ -1,4 +1,5 @@
 //jwt verification
+//jwt saves the database call timing and assigning schema for the user name and password
 const express = require("express");
 const jwt = require("jsonwebtoken");
 const jwtPassword = "123456";
@@ -47,7 +48,7 @@ app.post("/signin", function (req, res) {
     });
   }
 
-  var token = jwt.sign({ username: username }, "shhhhh");
+  var token = jwt.sign({ username: username }, "shhhhh");//encryptrion done by the jwt.sign()
   return res.json({
     token,
   });
@@ -56,7 +57,7 @@ app.post("/signin", function (req, res) {
 app.get("/users", function (req, res) {
   const token = req.headers.authorization;
   try {
-    const decoded = jwt.verify(token, jwtPassword);
+    const decoded = jwt.verify(token, jwtPassword); //verification
     const username = decoded.username;
     // return a list of users other than this username
     res.json({
