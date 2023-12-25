@@ -9,7 +9,7 @@ const dc = ["superman","flash","batman"]
 // const allheroes = marvel.concat(dc) //concat --> requires another array to return the merged arrays
 // console.log(allheroes);
 
-//spread operator usages
+//spread operator usages   and yoou can try more
 
 const all_new_heroes = [...marvel,...dc]
 console.log(all_new_heroes);
