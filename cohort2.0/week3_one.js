@@ -3,6 +3,7 @@ const app = express()
 //function return a boolean if  the age of person is 14
 // function isOldEnough(age){ //we dont need the function after using the
 //middleware below
+//
 //   if (age > 14){
 //     return true
 //   }else{
