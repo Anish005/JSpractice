@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Closure</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body style="background-color:#212121">
+  <button id="orange">Orange</button>
+  <button id="green">Green</button>
+  
+  <!-- <script src="script.js"></script> -->
+
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right">
+  </script>
+</body>
+  <script>
+    // //closures
+    // function init() {
+    //   let name = "Mozilla"; // name is a local variable created by init
+    //   function displayName() {
+    //     // displayName() is the inner function, that forms the closure
+    //     console.log(name); // use variable declared in the parent function
+    //   }
+    //   displayName();
+    // }
+    // init();
+    //lexical scoping ---. understand with an example of family
+
+    // function outer(){
+    //   let username = 'anish'
+    //   //console.log(secret)====>throws error
+    //   function inner(){
+    //     let secret = '124'
+    //     console.log('inner ',username) //access from outer func
+    //   }
+    //   function innerTwo(){
+    //     console.log('innerTwo ',username)
+    //     //console.log(secret)===> throws error
+    //   }
+    //   inner()
+    //   innerTwo()
+    // }
+    // outer()
+
+    // //closure example
+    // function makeFunc() {
+    //   const name = "Mozilla";
+    //   function displayName() {
+    //     console.log(name);
+    //   }
+    //   return displayName;//returning  reference of inner func
+    // }
+    // //role of memory reference----> the lexical scope  of outer func is stored not only executional context of the function
+    // const myFunc = makeFunc();
+    // myFunc();
+
+  </script>
+  <script>
+    // document.getElementById('orange').onclick = function(){
+    //   document.body.style.backgroundColor = `orange`
+    // }
+    // document.getElementById('green').onclick = function(){
+    //   document.body.style.backgroundColor = `green`
+    // }
+    function clickHandler(color){
+      //document.body.style.backgroundColor = `${color}` // as this executes the function directly without even clicking
+      return function(){
+        document.body.style.backgroundColor = `${color}`
+      }//access to color argument due to closure (lexical scoping)
+    }
+    document.getElementById('orange').onclick = clickHandler('orange')
+    document.getElementById('green').onclick = clickHandler('green')
+  </script>
+
+</html>
